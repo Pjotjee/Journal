@@ -3,10 +3,10 @@ import java.io.Serializable;
 import java.util.Timer;
 
 public class JournalEntry implements Serializable {
+    private  long id;                                   // id of the entry
+    private String title, content, mood, timestamp;     // details and content of the entry
 
-    private  long id;
-    private String title, content, mood, timestamp;
-
+    //** constructor of JournalEntry */
     public JournalEntry(long id, String title, String content, String mood, String timestamp) {
         this.id = id;
         this.title = title;
@@ -15,6 +15,7 @@ public class JournalEntry implements Serializable {
         this.timestamp = timestamp;
     }
 
+    //** getters of JournalEntry */
     public long getId() {
         return id;
     }
